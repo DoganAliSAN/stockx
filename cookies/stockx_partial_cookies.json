@@ -1,0 +1,472 @@
+[
+  {
+    "name": "_csrf",
+    "value": "7M4bqy84n_9C7dCfRsFIqFD6",
+    "domain": "accounts.stockx.com",
+    "path": "/usernamepassword/login",
+    "expires": 1751715429.74407,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "stockx_device_id",
+    "value": "30d9b4a0-9050-4e53-87a3-b0a31cb263ab",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1785411413.049474,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "stockx_session_id",
+    "value": "543f24c3-5d86-433b-9c1d-4de787831f60",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1750853255.584744,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "stockx_session",
+    "value": "e724536c-4797-4d68-8662-1ac0c77fbaf4",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": 1750855013.050396,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "language_code",
+    "value": "en",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": 1782387447.729738,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "stockx_selected_region",
+    "value": "US",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "display_location_selector",
+    "value": "false",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "chakra-ui-color-mode",
+    "value": "light",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": 1782387455.566832,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "is_gdpr",
+    "value": "false",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "stockx_ip_region",
+    "value": "US",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "pxcts",
+    "value": "b53a91a9-51b8-11f0-ab39-a0fb7008b070",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_pxvid",
+    "value": "b53a7ea3-51b8-11f0-ab39-aa650ec765ea",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1782387420,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "globalId",
+    "value": "58add6a5-6aaa-422f-b41c-79048b3dfa01",
+    "domain": ".fbot.me",
+    "path": "/",
+    "expires": 1785411421.975606,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "cf_clearance",
+    "value": "T6TOnCSEpKSACCGGf2leMCHdUAufwy01Dg4dva4tzdU-1750851423-1.2.1.1-UbTP4tqhYXv8kWD99QgZIYBUXlhtedweQ.15K0FyJyhStBxSmtEUUiAJ3eLk4bEMxnPkq1Px1L20MMU1B2eVlIrKmXCK6f2Adt054._0OIwmhAAjsBvkI3YAOBPVgGTNEo15AXr2fA_LOd9xolEpyLXdDVO3PAEPWzp4S8CWoh5lx2IdaOgTmeMjvX8MAA0pQcV.hNH_VxpLcmRyXRm09asTFz5fQta1XihA_R9CH4gk7HcduHJtPV4oqOg1pWYPg7dqTifmUh7rjWa3P3zGScxO3wE_ZHk_u1eLFyXL6IFY_DR7luPLIKw66sm._T6kZojb7BPqrrhezLrw8btGZteBz9aaAcdRwpsPE5ceTRQ",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1782387423.113438,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "lastRskxRun",
+    "value": "1750851424752",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1785411424.752699,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "rskxRunCookie",
+    "value": "0",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1785411424.753317,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "rCookie",
+    "value": "bz7a1lxqtb9if1kij6ipihmcbvqdip",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1785411426.182683,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_com.auth0.auth.%7B%22state%22%3A%7B%22forceLogin%22%3Atrue%7D%7D_compat",
+    "value": "{%22nonce%22:null%2C%22state%22:%22{%5C%22state%5C%22:{%5C%22forceLogin%5C%22:true}}%22%2C%22lastUsedConnection%22:%22production%22}",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": 1750853227,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "com.auth0.auth.%7B%22state%22%3A%7B%22forceLogin%22%3Atrue%7D%7D",
+    "value": "{%22nonce%22:null%2C%22state%22:%22{%5C%22state%5C%22:{%5C%22forceLogin%5C%22:true}}%22%2C%22lastUsedConnection%22:%22production%22}",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": 1750853227,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "did",
+    "value": "s%3Av0%3A2d39a8a9-7023-423c-873f-ac9463ad2c49.b%2Fm0D3dAP1XmVsTOegu%2F0%2BGSUOj6TJuJ7dC%2BVkiDKBY",
+    "domain": "accounts.stockx.com",
+    "path": "/",
+    "expires": 1782409029.257858,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "did_compat",
+    "value": "s%3Av0%3A2d39a8a9-7023-423c-873f-ac9463ad2c49.b%2Fm0D3dAP1XmVsTOegu%2F0%2BGSUOj6TJuJ7dC%2BVkiDKBY",
+    "domain": "accounts.stockx.com",
+    "path": "/",
+    "expires": 1782409029.258164,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "maId",
+    "value": "{\"pixlId\":45,\"cid\":\"441a9d63d0c20e70bd6c9415de533a08\",\"sid\":\"54c90c63-351e-4ad2-b917-11e36df3031c\",\"isSidSaved\":true,\"sessionStart\":\"2025-06-25T11:37:16.000Z\"}",
+    "domain": "accounts.stockx.com",
+    "path": "/",
+    "expires": 1750853244,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ttp",
+    "value": "2yzxwEbSrk8XmjSHCh8mys34aWg",
+    "domain": ".tiktok.com",
+    "path": "/",
+    "expires": 1784547439.377631,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_tt_enable_cookie",
+    "value": "1",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1784547440,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ttp",
+    "value": "01JYKE1M2T5BMGTY8CT3GG4A2Y_.tt.1",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1784547440,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "uuid",
+    "value": "rbos-dc366e2a-5649-456a-99a6-4e0cbcb8cdf2",
+    "domain": ".getrockerbox.com",
+    "path": "/",
+    "expires": 1753443442.732407,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "rbuid",
+    "value": "rbos-dc366e2a-5649-456a-99a6-4e0cbcb8cdf2",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1753443447.368765,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "language_code",
+    "value": "en",
+    "domain": "accounts.stockx.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_fbp",
+    "value": "fb.1.1750851443219.155180648365863453",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1758627443,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "ttcsid",
+    "value": "1750851440732::QI9UqfgnK50C7tvId3w0.1.1750851443233",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1784547443,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "ttcsid_C9M4BE3C77U8C02R6C3G",
+    "value": "1750851440732::ut1EkXPlA_wm2MRAt-mk.1.1750851443439",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1784547443,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "IDE",
+    "value": "AHWqTUn1VJLNabP1Suu6BWUzP2HKc_hfse3r3gSnSV3bljs_TAZlgZ0A4jQLaUqT",
+    "domain": ".doubleclick.net",
+    "path": "/",
+    "expires": 1785411443.796623,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_gcl_au",
+    "value": "1.1.928603226.1750851434.1924967360.1750851443.1750851444",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1758627434,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_pxhd",
+    "value": "kNScNwA6eMTJA-PBiWPkKfgVaMD3xpqOemAGJ8dv0Ojq7sUBHEKNZ8Vfj8qcgtfricoWuSBYkoyT3n5AScCtLQ==:EapIRXalsNeqZwWKJhWHzvPip36pqz3fG2CsyBWLC5GxaOAn2AZ4W4FyeRDwfSndPGH-BpYco986xcb0hEm/WiMYaAD1oGZFn/o6Bl-GBQc=",
+    "domain": "accounts.stockx.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "auth0",
+    "value": "s%3ASQkFriUABJjw3jKnN7iXS19OXmDVnJ0b.gcG7NA4M%2BMliHot%2BGPKVy15Uc1klYJSUOIPbAMqRITQ",
+    "domain": "accounts.stockx.com",
+    "path": "/",
+    "expires": 1759491445.476327,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "auth0_compat",
+    "value": "s%3ASQkFriUABJjw3jKnN7iXS19OXmDVnJ0b.gcG7NA4M%2BMliHot%2BGPKVy15Uc1klYJSUOIPbAMqRITQ",
+    "domain": "accounts.stockx.com",
+    "path": "/",
+    "expires": 1759491445.476396,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "receive-cookie-deprecation",
+    "value": "1",
+    "domain": ".doubleclick.net",
+    "path": "/",
+    "expires": 1766403447.243623,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "ad-id",
+    "value": "A439D-aRgUTQvllABj3DuUA|t",
+    "domain": ".amazon-adsystem.com",
+    "path": "/",
+    "expires": 1767267447.127891,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_dd_s",
+    "value": "logs=1&id=fbc1d925-f4d6-43a1-b839-9563a2730b8d&created=1750851431370&expire=1750852343947",
+    "domain": "accounts.stockx.com",
+    "path": "/",
+    "expires": 1750852347,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Strict"
+  },
+  {
+    "name": "uid",
+    "value": "89ef29fd-f487-4c4c-8635-a154f4d429a9",
+    "domain": ".criteo.com",
+    "path": "/",
+    "expires": 1784547448.525271,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "receive-cookie-deprecation",
+    "value": "1",
+    "domain": ".criteo.com",
+    "path": "/",
+    "expires": 1784547448.525455,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "token",
+    "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5USkNNVVEyUmpBd1JUQXdORFk0TURRelF6SkZRelV4TWpneU5qSTNNRFJGTkRZME0wSTNSQSJ9.eyJodHRwczovL3N0b2NreC5jb20vY3VzdG9tZXJfdXVpZCI6ImJlZjIxNjJkLTNlNGYtMTFmMC1hNzlhLTEyNTY4ZTk4MTE2ZiIsImh0dHBzOi8vc3RvY2t4LmNvbS9nYV9ldmVudCI6IkxvZ2dlZCBJbiIsImh0dHBzOi8vc3RvY2t4LmNvbS9lbWFpbF92ZXJpZmllZCI6ZmFsc2UsImlzcyI6Imh0dHBzOi8vYWNjb3VudHMuc3RvY2t4LmNvbS8iLCJzdWIiOiJhdXRoMHw2ODNiNGVkMWIwMzFlODNhMzdjZjAwYmIiLCJhdWQiOlsiZ2F0ZXdheS5zdG9ja3guY29tIiwiaHR0cHM6Ly9zdG9ja3gtcHJvZC5zdG9ja3gtcHJvZC5hdXRoMGFwcC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNzUwODUxNDQ2LCJleHAiOjE3NTA4OTQ2NDYsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUiLCJhenAiOiJPVnhydDRWSnFUeDdMSVVLZDY2MVcwRHVWTXBjRkJ5RCJ9.ukDUnOYc_2mb70lI8OUG3-0HEbBppMAzmhNrvapknpxuCzzhL9bMuBULWji5j1CXQwqlkITdnJkl-ku1lGz8325h9t33A2NqwQl-pLfQ0syIq59XIpR9Xn2bo6aEkyCu2NsHCZyf32tjNujLwTNTA6ygkj7P7V7DpWQOlmtjXYgIJFySZ2O2z1S5jHRV0DMp84_4XYsc4Qb68g-c2ThRsRVgb4VC0Xkc2dvSbMed8XhbvCeGWSb_K3xbyFKDGTpRJd7so4-rBkeLsfn3VLN-VaOyyGU9Gp4joTJFgMw-KPjfZFIemHvV9Uq8CHJt2Ggy-2LKpvzdKF8zYmrxHCor6g",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": 1785411447.7297,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "loggedIn",
+    "value": "bef2162d-3e4f-11f0-a79a-12568e98116f",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "stockx_selected_currency",
+    "value": "USD",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_pxde",
+    "value": "88f05fd3accb68793783d8be91ea434ac6bc6d62162a93baab7b0b20e9444ac9:eyJ0aW1lc3RhbXAiOjE3NTA4NTE0NTY0NjgsImZfa2IiOjB9",
+    "domain": ".stockx.com",
+    "path": "/",
+    "expires": 1750851786,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_pxhd",
+    "value": "or7x81Suj8CkqNNZqq06XllkloKm/wPI42NvoqkooCLhAx3nlSSk6AOgciW7fRtqcBy4o-luMHUET7b8ePa3ZA==:85oC4QToDb/0NEAR3POcwCDjQE2aX71K5f9Yuym8fL-BpQm5/Fktv77R6nMQQF0LhC4o1il6tMJ6PEQFIatUPmKAb8LSHTIqMFMKikdbHk4=",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_dd_s",
+    "value": "rum=0&expire=1750852356576&logs=1&id=00d65a8d-72a4-4f49-bb26-4ddf86ecb101&created=1750851419158",
+    "domain": "stockx.com",
+    "path": "/",
+    "expires": 1750852357,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Strict"
+  }
+]

@@ -1,0 +1,590 @@
+{
+  "success": false,
+  "error": {
+    "code": "ERR::SCRAPE::BAD_UPSTREAM_RESPONSE",
+    "http_code": 403,
+    "links": {
+      "Related Error Doc": "https://scrapfly.io/docs/scrape-api/error/ERR::SCRAPE::BAD_UPSTREAM_RESPONSE"
+    },
+    "message": "The website you target respond with an unexpected status code (>400) - The scrapped url: https://stockx.com/ respond with 403 - Forbidden: ",
+    "retryable": true
+  },
+  "full_response": {
+    "config": {
+      "asp": false,
+      "auto_scroll": false,
+      "body": null,
+      "cache": false,
+      "cache_clear": false,
+      "cache_ttl": 86400,
+      "correlation_id": null,
+      "cost_budget": null,
+      "country": "us",
+      "debug": false,
+      "dns": false,
+      "env": "LIVE",
+      "extract": null,
+      "extraction_model": null,
+      "extraction_model_custom_schema": null,
+      "extraction_prompt": null,
+      "extraction_template": null,
+      "format": "raw",
+      "geolocation": null,
+      "headers": {
+        "Accept": [
+          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+        ],
+        "Accept-Encoding": [
+          "gzip, deflate, br"
+        ],
+        "Accept-Language": [
+          "en-US,en;q=0.9"
+        ],
+        "Sec-Ch-Ua": [
+          "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+        ],
+        "Sec-Ch-Ua-Mobile": [
+          "?0"
+        ],
+        "Sec-Ch-Ua-Platform": [
+          "\"macOS\""
+        ],
+        "Sec-Fetch-Dest": [
+          "document"
+        ],
+        "Sec-Fetch-Mode": [
+          "navigate"
+        ],
+        "Sec-Fetch-Site": [
+          "none"
+        ],
+        "Sec-Fetch-User": [
+          "?1"
+        ],
+        "Upgrade-Insecure-Requests": [
+          "1"
+        ],
+        "User-Agent": [
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+        ]
+      },
+      "job_uuid": null,
+      "js": null,
+      "js_scenario": null,
+      "lang": null,
+      "log_eviction_date": "2025-06-28 21:47:59",
+      "method": "GET",
+      "origin": "WEB_SCRAPING_API",
+      "os": null,
+      "project": "default",
+      "project_uuid": "27c3e959-a6a5-47f2-b09b-797b7f9b424f",
+      "proxy_pool": "public_datacenter_pool",
+      "render_js": true,
+      "rendering_stage": "complete",
+      "rendering_wait": 1000,
+      "request_id": "aca62eba-3b3c-4a18-9628-c9610da11a49",
+      "retry": true,
+      "schedule_name": null,
+      "screenshot_api_cost": 60,
+      "screenshot_flags": null,
+      "screenshot_resolution": null,
+      "screenshots": null,
+      "session": null,
+      "session_sticky_proxy": true,
+      "ssl": false,
+      "tags": null,
+      "timeout": 150000,
+      "url": "https://stockx.com/",
+      "user_uuid": "9d54f2f3-039a-4fda-903d-b416b353a464",
+      "uuid": "01JYA7CWDPZW1QKRJVDY3415FH",
+      "wait_for_selector": "body",
+      "webhook_name": null
+    },
+    "context": {
+      "asp": null,
+      "bandwidth_consumed": 0,
+      "bandwidth_images_consumed": 0,
+      "cache": {
+        "entry": null,
+        "state": "MISS"
+      },
+      "cookies": [
+        {
+          "comment": null,
+          "domain": ".stockx.com",
+          "expires": null,
+          "http_only": false,
+          "max_age": null,
+          "name": "_pxvid",
+          "path": "/",
+          "secure": false,
+          "size": 42,
+          "value": "6a5102a5-4ee9-11f0-9f8e-8b98ae6501d9",
+          "version": null
+        },
+        {
+          "comment": null,
+          "domain": ".stockx.com",
+          "expires": null,
+          "http_only": false,
+          "max_age": null,
+          "name": "pxcts",
+          "path": "/",
+          "secure": false,
+          "size": 41,
+          "value": "6a511368-4ee9-11f0-9f8e-dace63f76c6d",
+          "version": null
+        },
+        {
+          "comment": null,
+          "domain": ".stockx.com",
+          "expires": "2025-06-21 21:53:59",
+          "http_only": false,
+          "max_age": null,
+          "name": "_pxde",
+          "path": "/",
+          "secure": false,
+          "size": 118,
+          "value": "9cfd93d70fdda795175e4c49cba9d235cdb42266d0008ec6a005e9c7138e389d:eyJ0aW1lc3RhbXAiOjE3NTA1NDI1MDg4MDcsImZfa2IiOjB9",
+          "version": null
+        },
+        {
+          "comment": null,
+          "domain": ".stockx.com",
+          "expires": "2025-06-21 21:53:59",
+          "http_only": false,
+          "max_age": null,
+          "name": "_px3",
+          "path": "/",
+          "secure": false,
+          "size": 399,
+          "value": "80a46d7f011620ad525368daf674d55cf91b33daa7e9065afa0581f23b24893e:gsLqNEaUBKuVqSopMdvbOji/ZWc8CN6QHIiPoP5/Gk1q+91oDaMexlNGAU+S5PZ/3lXY+osXjMmBp0D8b6+edQ==:1000:lQc3l+NU7W7Jhy10LQHiy68fbRmqs4lqDvV601eNqa3PIFFm0inGbYMbd50/w0X0RMqll8M9txtO9Hm2uKZpo2Pp9YUUFrhHh9zc8SJGK09cxA8zAws49mEUbLFE1xGvuIesVucud09fhuxCeInUmpcY7qwNzWY5KOfDN7ibFO2sSA5ux478QkoNG1xwOTjW8NySEHOJwWepTvGSJgCZkY3xvWWNp8MnOcowta3nRgQ=",
+          "version": null
+        },
+        {
+          "comment": null,
+          "domain": ".stockx.com",
+          "expires": null,
+          "http_only": false,
+          "max_age": null,
+          "name": "cf_clearance",
+          "path": "/",
+          "secure": true,
+          "size": 438,
+          "value": "u6WPJ92FyquHNY2l_l17uzIw.BNmmjPLjepxEat_vx8-1750542483-1.2.1.1-_UOt3h79Cq2sRnctKc5m6mmfoEK1If7DT00SRZD7vIjbF33I1jccW9dwTe3GyyViC3UQtEMSqDwFwIUZ_3Sr9GoMTgv4Bsy0y.bah_ZnHmvNij38v.qDm_ZvFHySS5IZPLFptkW9IK6H5i02kSaR7tGO1lxUu_mq9ficmosHedEWHHocqJOYHl7CKSwqOrJwJGw0XWuQGmEsOMODxFrvCdi9FBmxOaUC_YvavVfvPmxSUM4j8OlUSS9Wm3GY80vly0ltkCrvjs1JkihFQikFTHJzNAdq7ExPEBgHWYvUO5ZClIg7I3.JKvL64NBD3LTUzffXKJNQsIy6dO2TmJ93RXmgyngTAiaIl5cyuI6oBUo",
+          "version": null
+        }
+      ],
+      "cost": {
+        "details": [],
+        "total": 0
+      },
+      "created_at": "2025-06-21 21:47:59.807092",
+      "debug": null,
+      "env": "LIVE",
+      "fingerprint": "c951917439d00bfa1b9d3c4a6cecdf7f",
+      "headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Sec-Ch-Ua": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\"",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Sec-Ch-Ua-Platform": "\"macOS\"",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-User": "?1",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+      },
+      "is_xml_http_request": false,
+      "job": null,
+      "lang": [
+        "en-US",
+        "en"
+      ],
+      "os": {
+        "distribution": "Intel",
+        "name": "MAC",
+        "type": "desktop",
+        "version": "10_15_7"
+      },
+      "project": "default",
+      "proxy": {
+        "country": "us",
+        "identity": "15d6dbaeb6b14825ae0328a90f9b8838",
+        "network": "datacenter",
+        "pool": "public_datacenter_pool"
+      },
+      "redirects": [],
+      "retry": 3,
+      "schedule": null,
+      "session": null,
+      "spider": null,
+      "throttler": null,
+      "uri": {
+        "base_url": "https://stockx.com",
+        "fragment": null,
+        "host": "stockx.com",
+        "params": null,
+        "port": 443,
+        "query": null,
+        "root_domain": "stockx.com",
+        "scheme": "https"
+      },
+      "url": "https://stockx.com/",
+      "webhook": null
+    },
+    "insights": null,
+    "result": {
+      "browser_data": {
+        "javascript_evaluation_result": null,
+        "js_scenario": null,
+        "local_storage_data": {
+          "https://stockx.com": {
+            "PX16uD0kOF_px-ff": "e30=",
+            "PX16uD0kOF_px_fp": "eyJVMGttU1JZakkzcz0iOiI1OWRjNGUwZTY0MDY0NTdlYWViNDcyZDAyN2ZiMmVhNSIsIlEzazJPUVVWTVFrPSI6IjA2MjZkYTM0ODFiZWRjOTRiMTc0YTVkNzk0ZTdmOWQ2IiwiWGlSckpCdEpZQlE9IjoiV2ViS2l0IiwiREZJNUVrbzRQU2M9IjoiV2ViS2l0IFdlYkdMIiwiTG5SYmRHc2JXa1E9IjoiV2ViR0wgMS4wIChPcGVuR0wgRVMgMi4wIENocm9taXVtKSIsIkdtQXZZRndLTGxRPSI6WyJFWFRfY2xpcF9jb250cm9sIiwiRVhUX2NvbG9yX2J1ZmZlcl9mbG9hdCIsIkVYVF9jb2xvcl9idWZmZXJfaGFsZl9mbG9hdCIsIkVYVF9jb25zZXJ2YXRpdmVfZGVwdGgiLCJFWFRfZGVwdGhfY2xhbXAiLCJFWFRfZGlzam9pbnRfdGltZXJfcXVlcnlfd2ViZ2wyIiwiRVhUX2Zsb2F0X2JsZW5kIiwiRVhUX3BvbHlnb25fb2Zmc2V0X2NsYW1wIiwiRVhUX3JlbmRlcl9zbm9ybSIsIkVYVF90ZXh0dXJlX2NvbXByZXNzaW9uX2JwdGMiLCJFWFRfdGV4dHVyZV9jb21wcmVzc2lvbl9yZ3RjIiwiRVhUX3RleHR1cmVfZmlsdGVyX2FuaXNvdHJvcGljIiwiRVhUX3RleHR1cmVfbWlycm9yX2NsYW1wX3RvX2VkZ2UiLCJFWFRfdGV4dHVyZV9ub3JtMTYiLCJLSFJfcGFyYWxsZWxfc2hhZGVyX2NvbXBpbGUiLCJOVl9zaGFkZXJfbm9wZXJzcGVjdGl2ZV9pbnRlcnBvbGF0aW9uIiwiT0VTX2RyYXdfYnVmZmVyc19pbmRleGVkIiwiT0VTX3NhbXBsZV92YXJpYWJsZXMiLCJPRVNfc2hhZGVyX211bHRpc2FtcGxlX2ludGVycG9sYXRpb24iLCJPRVNfdGV4dHVyZV9mbG9hdF9saW5lYXIiLCJXRUJHTF9ibGVuZF9mdW5jX2V4dGVuZGVkIiwiV0VCR0xfY2xpcF9jdWxsX2Rpc3RhbmNlIiwiV0VCR0xfY29tcHJlc3NlZF90ZXh0dXJlX2FzdGMiLCJXRUJHTF9jb21wcmVzc2VkX3RleHR1cmVfZXRjIiwiV0VCR0xfY29tcHJlc3NlZF90ZXh0dXJlX2V0YzEiLCJXRUJHTF9jb21wcmVzc2VkX3RleHR1cmVfcHZydGMiLCJXRUJHTF9jb21wcmVzc2VkX3RleHR1cmVfczN0YyIsIldFQkdMX2NvbXByZXNzZWRfdGV4dHVyZV9zM3RjX3NyZ2IiLCJXRUJHTF9kZWJ1Z19yZW5kZXJlcl9pbmZvIiwiV0VCR0xfZGVidWdfc2hhZGVycyIsIldFQkdMX2xvc2VfY29udGV4dCIsIldFQkdMX211bHRpX2RyYXciLCJXRUJHTF9wb2x5Z29uX21vZGUiLCJXRUJHTF9wcm92b2tpbmdfdmVydGV4IiwiV0VCR0xfcmVuZGVyX3NoYXJlZF9leHBvbmVudCIsIldFQkdMX3N0ZW5jaWxfdGV4dHVyaW5nIl0sIlVpaG5LQmRHWVJNPSI6WyJbMSwgMjU1XSIsIlsxLCAyNTVdIiw4LCJ5ZXMiLDgsMjQsOCxudWxsLDI0LDMyNzY4LDEwMjQsMzI3NjgsMzIsMzI3NjgsMzEsMzIsMzIsNDA5NiwiWzgxOTIsIDgxOTJdIiwibm9fZnAiLDE2LDEyNywxMjcsMTAsMTYsMTYsMTAsMTgsMTgsMTYsMTI3LDEyNywxMCwxNiwxNiwxMCwxOCwxOCwxNiwxMjcsMTI3LDEwLDE2LDE2LDEwLDE4LDE4LDE2LDEyNywxMjcsMTAsMTYsMTYsMTAsMTgsMThdLCJZR1lWWmlVS0VsWT0iOiJHb29nbGUgSW5jLiAoSW50ZWwpIiwiUzNFK01RMGFPUVk9IjoiQU5HTEUgKEludGVsLCBBTkdMRSBNZXRhbCBSZW5kZXJlcjogSW50ZWwoUikgSEQgR3JhcGhpY3MgNTMwMCwgVW5zcGVjaWZpZWQgVmVyc2lvbikiLCJHVTlzVDE4bGJYaz0iOiJXZWJHTCBHTFNMIEVTIDEuMCAoT3BlbkdMIEVTIEdMU0wgRVMgMS4wIENocm9taXVtKSIsIk9TOE1iM3hGRGw0PSI6IjdiNTIzNjQyMTllYzUwNzNlNzJlMjg2OTI4ODllODU0IiwiWTFsV1dTWXpWR2s9IjoiZjg3ZjdmZDhkZjNlMWUwMmUyMzA0MzEzYjkyMzAyNmIiLCJXUThzRHg5cExEbz0iOiJjZDAxYzU5ZGM5MzY3YzJhYWMzMzgxYTFkNzFmOTFhOSIsIkVtZ25hRmNDSWxnPSI6IjRjMzljNTllMjQwOWE2NTcxZWZlNWFmNTg3NjIxZjRlIiwiUDJVS0pYa09EeEE9IjoiMTI2Ljg2OTcyNDM3NDU4NDYyIiwiTHhVYUZXcDdHQzQ9IjoiNjI3M2VmZDUxZGU1ZDVlMzNmZDBlNDhjYWRmYjRkNjgiLCJCRm94R2tFMk5pdz0iOiJjNGZjODQxNDVkZGE4NjUzZWUyZTEzMDA4MmUyNjdhZCIsIlQzVTZOUW9jT2dVPSI6IjAxNmJlYjE3ZGQ1N2E2ZTQ0NmIzNjI2NTI4NGMwYzljIiwiUDJVS0pYb0pEUlk9IjpbIl9fcGFnZXRpbWUkXzE3NTA1NDI1MDQ4MDMiXSwiSHdWcUJWcHZhakk9IjoiN2U0MGQwOTEwYjQ0Y2Q2NTJlOGYwNzZhNjI4NzcwMDkiLCJPMkVPSVg0TERoVT0iOiIzZjljYjEyYzMwZjczMDQzZjkxNTVhZmRmYjZiMTBkZSIsIlNCNTlYZzU0ZTJRPSI6MiwiQWhnM1dFUitQV3c9Ijp0cnVlLCJEelY2ZFVwWWNVND0iOnRydWUsImFSOWNIeXh6WFN3PSI6ZmFsc2UsIkRoUTdWRWg0T0dBPSI6ZmFsc2UsIlQzVTZOUWtlUEE4PSI6dHJ1ZSwiV0c1dGJoMEFabG89IjoibWlzc2luZyIsImFSOWNIeXgwWENvPSI6WyJfcHhWaWQiLCJfcHhVdWlkIiwiX3B4QXBwSWQiLCJfcHhNb2JpbGUiLCJfcHhIb3N0VXJsIiwiX3B4Q3VzdG9tTG9nbyIsIl9weEpzQ2xpZW50U3JjIiwiX3B4Rmlyc3RQYXJ0eUVuYWJsZWQiLCJfcHhPbkVycm9yIiwiX3B4QWN0aW9uIiwiXzE2dUQwa09GaGFuZGxlciIsIl9weEluaXQiXSwiR1U5c1QxOG9hbjg9IjpbIl9fcGFnZXRpbWUkXzE3NTA1NDI1MDQ4MDMiXSwiQlh0d08wQVFjUUE9IjpbIlBERiBWaWV3ZXI6OlBvcnRhYmxlIERvY3VtZW50IEZvcm1hdDo6YXBwbGljYXRpb24vcGRmfnBkZjo6dGV4dC9wZGZ+cGRmIiwiQ2hyb21lIFBERiBWaWV3ZXI6OlBvcnRhYmxlIERvY3VtZW50IEZvcm1hdDo6YXBwbGljYXRpb24vcGRmfnBkZjo6dGV4dC9wZGZ+cGRmIiwiQ2hyb21pdW0gUERGIFZpZXdlcjo6UG9ydGFibGUgRG9jdW1lbnQgRm9ybWF0OjphcHBsaWNhdGlvbi9wZGZ+cGRmOjp0ZXh0L3BkZn5wZGYiLCJNaWNyb3NvZnQgRWRnZSBQREYgVmlld2VyOjpQb3J0YWJsZSBEb2N1bWVudCBGb3JtYXQ6OmFwcGxpY2F0aW9uL3BkZn5wZGY6OnRleHQvcGRmfnBkZiIsIldlYktpdCBidWlsdC1pbiBQREY6OlBvcnRhYmxlIERvY3VtZW50IEZvcm1hdDo6YXBwbGljYXRpb24vcGRmfnBkZjo6dGV4dC9wZGZ+cGRmIl0sIllqZ1hPQ1JlSEFrPSI6IjE3NTA1NDI1MDU0MDUiLCJKRHBST21GWFVRQT0iOiJUeXBlRXJyb3I6IENhbm5vdCByZWFkIHByb3BlcnRpZXMgb2YgbnVsbCAocmVhZGluZyAnMCcpIGF0IGxyIChodHRwczovL2NsaWVudC5weC1jbG91ZC5uZXQvUFgxNnVEMGtPRi9tYWluLm1pbi5qczoyOjIwMDQxKSBhdCBmdW5jIChodHRwczovL2NsaWVudC5weC1jbG91ZC5uZXQvUFgxNnVEMGtPRi9tYWluLm1pbi5qczozOjExMjUwNykgYXQgcXQgKGh0dHBzOi8vY2xpZW50LnB4LWNsb3VkLm5ldC9QWDE2dUQwa09GL21haW4ubWluLmpzOjI6MTM1NjUpIGF0IGh0dHBzOi8vY2xpZW50LnB4LWNsb3VkLm5ldC9QWDE2dUQwa09GL21haW4ubWluLmpzOjQ6MTM2MiIsIlJseHpIQU14ZVNZPSI6dHJ1ZSwiTURaRk5uVmRRd0k9IjozMywiVTBrbVNSWWtKMzA9IjoiZmQ3MTQ5YmJmYjMxNjY5OWVmOTE4ZmE3YmI3NTEwYTgiLCJGVXRnUzFNblluQT0iOiJkNDFkOGNkOThmMDBiMjA0ZTk4MDA5OThlY2Y4NDI3ZSIsIlZRc2dDeE5oSnpnPSI6ImZkNzE0OWJiZmIzMTY2OTllZjkxOGZhN2JiNzUxMGE4IiwiT2tCUEFIOHFSVFE9IjozLCJpZnYiOjMsImlmdCI6IjE3NTA1NDI1MDU0MDUiLCJJVWNVUjJjZ0VuWT0iOjE5MjAsImZXTklJenNMUWhBPSI6MTA4MCwiTERKWk1tbGNXUUU9IjotMSwiRncxaURWSmhhRGc9IjoiMTkyMFgxMDgwIiwiY3lsR2FUVkZURnM9IjoyNCwiUDJVS0pYb0tDQlE9IjoyNCwiVTBrbVNSWW5Kbk09IjotMSwiZEVvQkNqSXRCekU9IjoiMTAyMDdiMmYiLCJkRW9CQ2pJZ0N6cz0iOiJlbiIsIkRYTjRNMGdZZndrPSI6Ik1hY0ludGVsIiwiTkFwQlNuSmlSbnc9IjoiTW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTVfNykgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEyMi4wLjAuMCBTYWZhcmkvNTM3LjM2IiwiZFd0QUt6TUNTaGc9IjpbImVuIiwiZW4tVVMiXSwiVWlobktCZEhaaDA9Ijp0cnVlLCJId1ZxQlZsc2FqWT0iOjQsIlYwMGlUUkVrS0hvPSI6MTIsIktENWRQbTVTVmd3PSI6NDIwLCJJeGtXR1dWd0V5TT0iOmZhbHNlLCJleUZPWVQxR1NGTT0iOiJTYXQgSnVuIDIxIDIwMjUgMTQ6NDg6MjUgR01ULTA3MDAgKE1vdW50YWluIFN0YW5kYXJkIFRpbWUpIiwiUEFKSlFucG9UM0E9Ijp0cnVlLCJKbnhUZkdBV1VrYz0iOiI2NDU1NmM3NyIsIllHWVZaaVlNRWxFPSI6NDI5NDcwNTE1MiwiRVhka04xY2NZd2M9IjoiN2M1Zjk3MjQiLCJWUXNnQ3hCaElEND0iOiJkNGFjYmU3MDJiMmNlOWQ3YjE4NWNiZjAwNjJjOGRlYSIsIkJYdHdPMEFRZWc4PSI6bnVsbCwiSG1RclpGc0lMMVE9IjoiODhlZDE5OGUzY2QxMjI4OWE1YzhmNTEzNWE3ZjQ2ZGMifQ==",
+            "PX16uD0kOF_px_hvd": "90318ac180f30a8ebd066fda6dd932e9"
+          }
+        },
+        "session_storage_data": {
+          "https://stockx.com": {
+            "pxsid": "7579391a-4ee9-11f0-b556-c11cf8d1a652"
+          }
+        },
+        "websockets": [],
+        "xhr_call": [
+          {
+            "body": "payload=aUkQRhAIEH5cYFBWdUFQZ3d/DxAeEFYQCEkQZWMKQXZKC195WFUPEAgQWkZGQkEIHR1BRl1RWUocUV1fHRAeEGhgRmN1S3AAZ1sGDxAIAh4Qdmp8Bn8CVWtURVkPEAgQf1NRe1xGV14QHhB7Z1FnYABRWnRcUQ8QCAIeEHdFXl9xZGRYa1hBDxAIAAILBx4QUVVVemF2Vl5zansPEAgBBAICHhB3RV5fcWRkXlB2Bg8QCAMFBwIHBgAG^HAgYFAQseEHlKd1d3ZQcKdHF/DxAIAwUHAgcGAAcS}DCBNgoCBh4QKUwN0V2dhAgRkZWcPEAgQBAVQA8wQGBwofBldXCx8DA1QCH1NRAADsfV1QCVFNTCwBRBwFREB4QfmNR/a2cAVQd6dWacPEAhcR1>D5eHhBR`S151U2ZodmNeKBg8QCAIeEHBa}RUhqd3BFfF9RDxAIVFNeQVceEGoCZG0NgKYF1CeXpzDxAIEGJq7AwMFBgcQHhBnW1pceXBgcGtKew8QCBBCSlpREB4Qd19VXFN0UXd77ZHsPEAhUU15BV09Pbw==&appId=PX16uD0kOF&tag=ICZVYW5XUwo9&uuid=67b16458-4ee9-11f0-ac29-ef0faa92c53c&ft=355&seq=0&en=NTA&pc=9596974869182797&vid=6a5102a5-4ee9-11f0-9f8e-8b98ae6501d9&cts=6a511368-4ee9-11f0-9f8e-dace63f76c6d&rsc=1",
+            "headers": {
+              "Accept": "*/*",
+              "Content-type": "application/x-www-form-urlencoded",
+              "Origin": "https://stockx.com",
+              "Referer": "https://stockx.com/",
+              "accept-language": "en,en-US;q=0.8,en;q=0.7",
+              "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-ch-ua-platform": "\"macOS\"",
+              "sec-fetch-user": "?1",
+              "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+            },
+            "method": "POST",
+            "response": {
+              "body": "",
+              "content_encoding": "utf-8",
+              "content_type": "application/json; charset=utf-8",
+              "duration": 0,
+              "format": "text",
+              "headers": {
+                "access-control-allow-credentials": "true",
+                "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+                "access-control-allow-origin": "https://stockx.com",
+                "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+                "content-length": "1852",
+                "content-type": "application/json; charset=utf-8",
+                "date": "Sat, 21 Jun 2025 21:48:24 GMT",
+                "timing-allow-origin": "*",
+                "via": "1.1 google"
+              },
+              "status": 200
+            },
+            "type": "xhr",
+            "url": "https://collector-px16ud0kof.cl6.px-cloud.net/assets/js/bundle"
+          },
+          {
+            "body": null,
+            "headers": {
+              "Accept": "*/*",
+              "Origin": "https://stockx.com",
+              "Referer": "https://stockx.com/",
+              "accept-language": "en,en-US;q=0.8,en;q=0.7",
+              "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-ch-ua-platform": "\"macOS\"",
+              "sec-fetch-user": "?1",
+              "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+            },
+            "method": "GET",
+            "response": {
+              "body": "",
+              "content_encoding": null,
+              "content_type": "text/html",
+              "duration": 0,
+              "format": "text",
+              "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Content-Length": "260",
+                "Content-Type": "text/html",
+                "Date": "Sat, 21 Jun 2025 21:48:25 GMT"
+              },
+              "status": 200
+            },
+            "type": "xhr",
+            "url": "https://tzm.px-cloud.net/ns?c=67b16458-4ee9-11f0-ac29-ef0faa92c53c"
+          },
+          {
+            "body": null,
+            "headers": {
+              "Accept": "*/*",
+              "Origin": "https://stockx.com",
+              "Referer": "https://stockx.com/",
+              "accept-language": "en,en-US;q=0.8,en;q=0.7",
+              "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-ch-ua-platform": "\"macOS\"",
+              "sec-fetch-user": "?1",
+              "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+            },
+            "method": "HEAD",
+            "response": {
+              "body": "",
+              "content_encoding": "utf-8",
+              "content_type": "application/javascript; charset=utf-8",
+              "duration": 0,
+              "format": "text",
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "access-control-expose-headers": "active-cdn,x-served-by",
+                "active-cdn": "Fastly-RG",
+                "age": "350",
+                "cache-control": "max-age=600",
+                "content-encoding": "gzip",
+                "content-length": "72924",
+                "content-type": "application/javascript; charset=utf-8",
+                "date": "Sat, 21 Jun 2025 21:48:24 GMT",
+                "etag": "\"4b6346dffe1f70df0d38f62a0367695b\"",
+                "expires": "Sat, 21 Jun 2025 21:13:18 GMT",
+                "last-modified": "Sat, 21 Jun 2025 21:02:09 GMT",
+                "server": "UploadServer",
+                "vary": "Accept-Encoding",
+                "via": "1.1 varnish",
+                "x-cache": "HIT",
+                "x-cache-hits": "1",
+                "x-goog-stored-content-length": "72924",
+                "x-served-by": "cache-bur-kbur8200064-BUR",
+                "x-timer": "S1750542504.473173,VS0,VE1"
+              },
+              "status": 200
+            },
+            "type": "xhr",
+            "url": "https://client.px-cloud.net/PX16uD0kOF/main.min.js"
+          },
+          {
+            "body": null,
+            "headers": {
+              "Accept": "*/*",
+              "Origin": "https://stockx.com",
+              "Referer": "https://stockx.com/",
+              "accept-language": "en,en-US;q=0.8,en;q=0.7",
+              "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-ch-ua-platform": "\"macOS\"",
+              "sec-fetch-user": "?1",
+              "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+            },
+            "method": "HEAD",
+            "response": {
+              "body": "",
+              "content_encoding": "utf-8",
+              "content_type": "application/javascript; charset=utf-8",
+              "duration": 0,
+              "format": "text",
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "access-control-expose-headers": "active-cdn,x-served-by",
+                "active-cdn": "fastly",
+                "age": "23",
+                "cache-control": "public, max-age=600",
+                "content-length": "533656",
+                "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+                "content-type": "application/javascript; charset=utf-8",
+                "date": "Sat, 21 Jun 2025 21:48:26 GMT",
+                "etag": "W/\"82498-kN19p90LoqhQ4puIn5M6586ITuk\"",
+                "origin-agent-cluster": "?1",
+                "referrer-policy": "no-referrer",
+                "strict-transport-security": "max-age=15552000; includeSubDomains",
+                "via": "1.1 varnish",
+                "x-cache": "HIT",
+                "x-cache-hits": "1",
+                "x-content-type-options": "nosniff",
+                "x-dns-prefetch-control": "off",
+                "x-download-options": "noopen",
+                "x-frame-options": "SAMEORIGIN",
+                "x-permitted-cross-domain-policies": "none",
+                "x-served-by": "cache-bur-kbur8200037-BUR",
+                "x-timer": "S1750542506.442643,VS0,VE1",
+                "x-xss-protection": "0"
+              },
+              "status": 200
+            },
+            "type": "xhr",
+            "url": "https://captcha.px-cloud.net/PX16uD0kOF/captcha.js?a=c&u=67b16458-4ee9-11f0-ac29-ef0faa92c53c&v=6a5102a5-4ee9-11f0-9f8e-8b98ae6501d9&m=0"
+          },
+          {
+            "body": "payload=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^AV1NWEkJAXUJXQEZbV0ESXVQSXEdeXhIaQFdTVltcVRIVAhUbblwSEhISU0YSXkASGlpGRkJBCB0dUV5bV1xGHEJKH1FeXUdWHFxXRh1iagMER3YCWX10HV9TW1wcX1tcHFhBCAAIAAICBgMbblwSEhISU0YSXlYSGlpGRkJBCB0dUV5bV1xGHEJKH1FeXUdWHFxXRh1iagMER3YCWX10HV9TW1wcX1tcHFhBCAEICwMCBgcbblwSEhISU0YSRFYSGlpGRkJBCB0dUV5bV1xGHEJKH1FeXUdWHFxXRh1iagMER3YCWX10HV9TW1wcX1tcHFhBCAEICwADAQEbblwSEhISU0YSWkZGQkEIHR1RXltXXEYcQkofUV5dR1YcXFdGHWJqAwRHdgJZfXQdX1NbXBxfW1wcWEEIAQgLAAMCBxAeEGVjCkF2SgtfeVhVDxAIEFpGRkJBCB0dQUZdUVlKHFFdXx0QHhBWSwNxUGZ0emFkVQ8QCGlvHhBhAXcZf2MGV2JVcw8QCBAQHhBxdAYLelkGS2JxQQ8QCFRTXkFXHhBWd11wcVh7RnBICg8QCEZAR1ceEFdVc2JjdgtAdmpdDxAIaW8eEFB6e2hRW1lQdQJVDxAIVFNeQVceEGgDA2FqYXsCZ3VFDxAISRBLWhAIHwYCBgYGCk8eEFdLdH1rZgd7ZnR/DxAIHwIcBAUeEHFIdBlRZwdQVmdjDxAIAh4Qd19VXFN0Y3d4ZFkPEAhUU15BVx4QZFtKWH5wcHVrcEEPEAhUU15BVx4QaAMDYWphe0hnAEUPEAhUU15BVx4QflxgUFZ1QWtqZ2sPEAhUU15BVx4QZFtKWH5wcHdrWmsPEAhUU15BVx4QYgBneXhqWXxxWmMPEAhUU15BVx4QdF9FWFB0c3N5ZFEPEAhUU15BVx4QZQJ3R2NgAl9+AV0PEAhUU15BVx4QfAACcX5qdi;G3VwWgoPEAhUU15BVx4QUVVVemF2Vl9walUPEAhUU15BVx4QZnB4B2dVQhlUdVUPEAhUU15BVx4QfkpnU3RlQgd1YXMPEANhUU15BVx4QUGB8a3dLWgRqYXMPEAhUU15BVx4QfHNCcGFceFtjAVkPEAgQCgAEAgQCBwMABAAHBwEKCwcLBgoQHhB7Z1FnYABjQXR6Zw8QCBADBwEBCgoDCwMEBwEABwYDAQQEChAeEAQABgYNDQQMBAMABgcAAQQGAwMNEAgQBQEHBwwMBQ0FAgEHBgEAB_QcCAgwQHhBWVUV2ZnZ8XHB6XQ8QCAYCBgIeEFR3e3hzWFlAcUhZDxAIEFsBWwxGC1ZVaGIJXWsRVRAeEHZIZARWZ0JUUXcKDxAIEEVXUFlbRhAeEH5cYFBWdUFXandRDxAIEFpGRkJBCBAeEHRfRVhQdH91eHQCDxAIEHNfV0BbUVMdYlpdV1xbShAeEHFIdBlRZwdQV1ljDxAIEEUBURAeEHRxXVp5XnRzeHAGDxAIEEFRQFdXXBAeEGhgRmN1S3BKZEtFDxAISRBCXkdVV0pGEAhJEAIQCEkQVBAIEFtcRldAXFNeH0JWVB9EW1dFV0AQHhBcEAgQYnZ0EmRbV0VXQBBPHhADEAhJEFQQCBBbXEZXQFxTXh9CVlQfRFtXRVdAEB4QXBAIEHFaQF1fVxJidnQSZFtXRVdAEE8eEAAQCEkQVBAIEFtcRldAXFNeH0JWVB9EW1dFV0AQHhBcEAgQcVpAXV9bR18SYnZ0EmRbV0VXQBBPHhABEAhJEFQQCBBbXEZXQFxTXh9CVlQfRFtXRVdAEB4QXBAIEH9bUUBdQV1URhJ3VlVXEmJ2dBJk:W1dFV0AQTx4QBhAISRBUEAgQW1xGV0BcU14fQlZUH0RbV0VXQBAeEFwQCBBlV1B5W0YSUEdbXkYfW1wSYnZ0EE9PHhBCXkdVW1xBbV5XXBAIB08eEHpFZENwZEJEa3ZjDxAISRBBX1YQCEkQXVkQCEZAR1ceEFdKEAhUU15BV09PHhB4ZEFjZQBzSnRldw8QCElPHhBkAgJbZmB7XHlqQQ8QCFRTXkFXHhBrWFVqfXFWYXdFRQ8QCFRTXkFXHhB7Z1FnYABjRndqYw8QCBADBQEHC1BUUBAeEFB6e2hRW1lrendZDxAISRBBR0JCXUBGEAhGQEdXHhBBRlNGR0EQCEkQV1RUV1FGW0RXZktCVxAIEAFVEB4QQEZGEAgFAh4QVl1FXF5bXFkQCAccBx4QQVNEV3ZTRlMQCFRTXkFXT08eEGZmfwZRRVpof1lzDxAIEFZXVFNHXkYQHhB/WVp6cXpRW2ZmVQ8QCAEeEHwAAnF+ant6cXBVDxAIVFNeQVceEGFecB13cwoEV1t3DxAIEAQEVAMKAwoEEB4Qemd8XWMDVUJrAVUPEAhpVFNeQVdGvHhB/WVp6cXpRWmBmQQ8QCGlUU15BV28eEH5cYFBWdUFWZWdzDxAIAB4QZHVCWlNad3RrdAYPEAhGQEdXHhBqY39dc0paRH5IUQ8QCEZAR1ceEHF0Bgt6WQYCYmEGDxAIRkBHVx4QYWYKClRFSmFiWVkPEAhGQEdXHhB7Z1FnYABRVXdcaw8QCAMLAAIeEFRlfHt7SEF+Y1pzDxAIAwIKAh4QfnZ4aH9fXlFlY3cPEAgfAx4QZwJZX2Fga1x4XH8PEAgfAx4QdEUDW3ZkeFpTdlUPEAgQAwsAAmoDAgoCEB4QYgBneXhqXXlxcGMPEAgABh4QUUtedVNmZHRmdEEPEAgABh4QVmVGc3lIc3FhWgoPEAgDAx4Qa3VrZGhbZ2J6A38PEAgBAh4QZl5gBXRzVR1RcXsPEAgfAx4QdGdGVWEDc1VrAVUPEAgfAx4QZVtwRHtwC35TYHcPEAgCHhB+SmdTdGVCGXpxcw8QCAIeEHwAAnF+and6c0pFDxAIRkBHVx4QYAECS2Jje2F8RWsPEAhUU15BVx4QawNeZWVhawFnX3sPEAgAHhB7Z1FnYA`BRWnRcUQ8QCAMeEHdFXl9xZGRYa1hBDxAIAQELCh4QVFVjfmB2Wl1xXGMPEAgDBQcCBwYABwIHBAQGHhBRVVV6YXZWXnNqew8QCAEEAgIeEHdFXl9xZGReUHYGDxAIAwUHAgcGAAcCBgUBCx4QeUp3V3dlBwp0cX8PEAgDBQcCBwYABwIKBwABHhBTA3RXZ2ECBGRlZw8QCBAEBVADBAYHCh8GV1cLHwMD_VAIfU1EACx9XVAJUU1MLAFEHAVEQHhB+ZH9rZwBVB3p1Zw8QCBAKVldTBgBW}AFNXAwUKVAIKVAVUUADBUAQIHBAMAU1YACwIHCwNTBVZWBQFUCwMBCwYFBlFRVgpUUVQEAwUKAAtRBAEAAQEKCwEBCwsFU1EDCwFUBQJQAgYCVAFWAVAEV1cLUQIDAlMGUQIBAVYCAwAHVlAABVcEAwYLCgIBBANQV1EAA1RRCgILVAALUAABAAAHAgoEAQ^[VTBlEFBAYEBVQLVAFWB1EBU1YAUVQLUQAAUVAKUFAEV1YGC1cEUAdUCgAAAgtUB1cGUVZQVwoLAwQGVFNTAAZUAFRWVlYDAVNXVgpWC1AKBFMBCwULBwALAwNTUQdTBAQDUwEDUABTAgRXUwRRA}hAeEFFLXnVTZmh2Y14GDxAICwYDHAMCAgICAgIAAQoDGAwseEHBaRUhqd3BFfF9RDxAIVFNeQVceEGoCZ0NgYF1CeXpzDxAIEGJqAwMFBgcQHhBnW1pceXBgcGtKew8QCBBCSlpREB4Qd19VXFN0UXd7ZHsPEAhUU15BV09PHkkQRhAIEFBgfGt3S0YFZ0tRDxAeEFYQCEkQUXprdFZYa1dzd2cPEAgQWkZGQkEIHR1RXV5eV1FGXUAfYmoDBEd2All9dBxCSh9RXltXXEYcXFdGHVAdVRAeEHtnUWdgAFFadFxRDxAIAB4Qd0VeX3FkZFhrWEEPEA[gHBQECHhB5SndXd2UHCnRxfw8QCAMFBwIHBgAHAgoHAAYeEFMDdFdnYQIEZGVnDxAIEAQFUAMEBgcKHwZXVwsfAwNUAh9TUQALH1dUAlRTUwsAUQcBURAeEH5kf2tnAFUHenVnDxAIEApWV1MGAFYAU1cDBQpUAgpUBVRQAFQBAgcEAwBTVgALAgcLA1MFVlYFAVQLAwELBgUGUVFWClRRVAQDBQoAC1EEAQABAQoLAQELCwVTUQMLAVQFAlACBgJUAVYBUARXVwtRAgMCUwZRAgEBVgIDA7AdWUAAFVwQDBgsKAgEEA1BXUQADVFEKAgtUAAtQAAEAAAcCCgQBBVMGUQUEBgQFVAtUAVYHUQFTVgBRVAtRAABRUApQUARXVgYLVwRQB1QKAAACC1QHVwZRVlBXCgsDBAZUU1MABlQAVFZWVgMBU1dWClYLUAoEUwELBQsHAAsDA1NRB1MEBANTAQNQAFMCBFdTBFECEB4QUUtedVNmaHZjXgYPEAgLBgMcAwICAgICAgABCgYDCx4QcFpFSGp3cEV8X1EPEAhUU15BVx4QagJnQ2BgXUJ5enMPEAgQYmoDAwUGBxAeEGdbWlx5cGBwa0p7DxAIEEJKWlEQHhB3X1VcU3R7Rd3tkew8QCFRTXkFXT09v&appId=PX16uD0kOF&tag=ICZVYW5XUwo9&uuid=67b16458-4ee9-11f0-ac29-ef0faa92c53c&ft=355&seq=2&en=NTA&cs=d2cd3dc209e67c253c0fc427f7ba7317a3befcabbfc32408672d471805fb3b79&pc=4935672478620079&sid=7579391a-4ee9-11f0-b556-c11cf8d1a652\udb40\udd31\udb40\udd37\udb40\udd35\udb40\udd30\udb40\udd35\udb40\udd34\udb40\udd32\udb40\udd35\udb40\udd30\udb40\udd35\udb40\udd34\udb40\udd30\udb40\udd35&vid=6a5102a5-4ee9-11f0-9f8e-8b98ae6501d9&ci=757e66d0-4ee9-11f0-a720-8f651647ae85&cts=6a511368-4ee9-11f0-9f8e-dace63f76c6d&rsc=2",
+            "headers": {
+              "Accept": "*/*",
+              "Content-type": "application/x-www-form-urlencoded",
+              "Origin": "https://stockx.com",
+              "Referer": "https://stockx.com/",
+              "accept-language": "en,en-US;q=0.8,en;q=0.7",
+              "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-ch-ua-platform": "\"macOS\"",
+              "sec-fetch-user": "?1",
+              "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+            },
+            "method": "POST",
+            "response": {
+              "body": "",
+              "content_encoding": "utf-8",
+              "content_type": "application/json; charset=utf-8",
+              "duration": 0,
+              "format": "text",
+              "headers": {
+                "access-control-allow-credentials": "true",
+                "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+                "access-control-allow-origin": "https://stockx.com",
+                "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+                "content-length": "792",
+                "content-type": "application/json; charset=utf-8",
+                "date": "Sat, 21 Jun 2025 21:48:28 GMT",
+                "timing-allow-origin": "*",
+                "via": "1.1 google"
+              },
+              "status": 200
+            },
+            "type": "xhr",
+            "url": "https://collector-px16ud0kof.cl6.px-cloud.net/assets/js/bundle"
+          }
+        ]
+      },
+      "content": "<html lang=\"en\"><head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"description\" content=\"px-captcha\">\n    <title>Access to this page has been denied</title>\n    \n<script src=\"/16uD0kOF/captcha/captcha.js?a=c&amp;u=67b16458-4ee9-11f0-ac29-ef0faa92c53c&amp;v=6a5102a5-4ee9-11f0-9f8e-8b98ae6501d9&amp;m=0\"></script><script src=\"https://captcha.px-cloud.net/PX16uD0kOF/captcha.js?a=c&amp;u=67b16458-4ee9-11f0-ac29-ef0faa92c53c&amp;v=6a5102a5-4ee9-11f0-9f8e-8b98ae6501d9&amp;m=0\"></script><style>@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');  div.px-captcha-background { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.31); } div.px-captcha-container { position: fixed; height: 340px; background-color: #fff; font-family: Roboto, sans-serif; } img.px-captcha-logo { display: block; margin: auto; padding: 53px 0 31px; } div.px-captcha-header { color: #626364;  font-size: 29px; font-weight: 500; margin: 67px 0 33px; line-height: 0.83; text-align: center; } div.px-captcha-message { color: #626364; ; font-size: 18px;  min-height: 48px; margin: 0 0 29px; line-height: 1.33; text-align: center; } div#px-captcha { min-height: 100px; text-align: center; } div.px-captcha-refid { border-top: solid 1px #f0eeee; min-height: 27px; margin: 11px 0 0; border-radius: 0 0 3px 3px; background-color: #fafbfc; font-size: 10px; line-height: 2.7; text-align: center; color: #b1b5b8; } @media (min-width: 620px) { div.px-captcha-container { width: 530px; top: 50%; left: 50%; margin-top: -170px; margin-left: -265px; border-radius: 3px; box-shadow: 0 2px 9px -1px rgba(0, 0, 0, 0.13); } } @media (min-width: 481px) and (max-width: 620px) { div.px-captcha-container { width: 85%; top: 50%; left: 50%; margin-top: -170px; margin-left: -42.5%; border-radius: 3px; box-shadow: 0 2px 9px -1px rgba(0, 0, 0, 0.13); } } @media (max-width: 480px) { div.px-captcha-refid { position: fixed; width: 100%; left: 0; bottom: 0; border-radius: 0; font-size: 14px; line-height: 2; } } @media (max-width: 390px) { div.px-captcha-refid { font-size: 12px; line-height: 2.5; } }body { background-color: #fafbfc; } @media (max-width: 480px) { body { background-color: #fff; } div.px-captcha-container { width: 100%; top: 50%; left: 50%; margin-top: -170px; margin-left: -50%; } }</style><style type=\"text/css\">.px-loader-wrapper {    display: flex;}@keyframes loadingEffect {    0% {        background-position: 0;    }    100% {        background-position: 60vw;    }}.px-inner-loading-area {    width: 253px;    height: 50px;    border-radius: 100px;    animation-name: loadingEffect;    animation-duration: 1.2s;    animation-iteration-count: infinite;    animation-timing-function: ease;    animation-fill-mode: forwards;    background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);}.px-loading-area {    width: 253px;    height: 50px;    margin: undefined;}</style><script src=\"https://client.px-cloud.net/PX16uD0kOF/main.min.js\"></script><style>\n          *, *:before, *:after {\n              transition: none !important;\n              transform: none !important;\n              animation: none !important;\n              filter: none !important;\n              box-shadow: none !important;\n              opacity: 1 !important;\n              will-change: auto !important;\n          }\n        </style></head>\n<body>\n<script>\n    /* PerimeterX assignments */\n    window._pxVid = '6a5102a5-4ee9-11f0-9f8e-8b98ae6501d9';\n    window._pxUuid = '67b16458-4ee9-11f0-ac29-ef0faa92c53c';\n    window._pxAppId = 'PX16uD0kOF';\n    window._pxMobile = false;\n    window._pxHostUrl = '/16uD0kOF/xhr';\n    window._pxCustomLogo = 'https://stockx-assets.imgix.net/logo/stockx-logo-green-2021.svg';\n    window._pxJsClientSrc = '/16uD0kOF/init.js';\n    window._pxFirstPartyEnabled = true;\n    var pxCaptchaSrc = '/16uD0kOF/captcha/captcha.js?a=c&u=67b16458-4ee9-11f0-ac29-ef0faa92c53c&v=6a5102a5-4ee9-11f0-9f8e-8b98ae6501d9&m=0';\n\n    var script = document.createElement('script');\n    script.src = pxCaptchaSrc;\n    script.onerror = function () {\n        script = document.createElement('script');\n        script.src = 'https://captcha.px-cloud.net/PX16uD0kOF/captcha.js?a=c&u=67b16458-4ee9-11f0-ac29-ef0faa92c53c&v=6a5102a5-4ee9-11f0-9f8e-8b98ae6501d9&m=0';\n        script.onerror = window._pxOnError;\n        document.head.appendChild(script);\n    };\n    window._pxOnError = function () {\n        var style = document.createElement('style');\n        style.innerText = '@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);body{background-color:#fafbfc}.px-captcha-error-container{position:fixed;height:340px;background-color:#fff;font-family:Roboto,sans-serif}.px-captcha-error-header{color:#f0f1f2;font-size:29px;margin:67px 0 33px;font-weight:500;line-height:.83;text-align:center}.px-captcha-error-message{color:#f0f1f2;font-size:18px;margin:0 0 29px;line-height:1.33;text-align:center}.px-captcha-error-button{text-align:center;line-height:48px;width:253px;margin:auto;border-radius:50px;border:solid 1px #f0f1f2;font-size:20px;color:#f0f1f2}.px-captcha-error-wrapper{margin:18px 0 0}div.px-captcha-error{margin:auto;text-align:center;width:400px;height:30px;font-size:12px;background-color:#fcf0f2;color:#ce0e2d}img.px-captcha-error{margin:6px 8px -2px 0}.px-captcha-error-refid{border-top:solid 1px #f0eeee;height:27px;margin:13px 0 0;border-radius:0 0 3px 3px;background-color:#fafbfc;font-size:10px;line-height:2.5;text-align:center;color:#b1b5b8}@media (min-width:620px){.px-captcha-error-container{width:530px;top:50%;left:50%;margin-top:-170px;margin-left:-265px;border-radius:3px;box-shadow:0 2px 9px -1px rgba(0,0,0,.13)}}@media (min-width:481px) and (max-width:620px){.px-captcha-error-container{width:85%;top:50%;left:50%;margin-top:-170px;margin-left:-42.5%;border-radius:3px;box-shadow:0 2px 9px -1px rgba(0,0,0,.13)}}@media (max-width:480px){body{background-color:#fff}.px-captcha-error-header{color:#f0f1f2;font-size:29px;margin:55px 0 33px}.px-captcha-error-container{width:530px;top:50%;left:50%;margin-top:-170px;margin-left:-265px}.px-captcha-error-refid{position:fixed;width:100%;left:0;bottom:0;border-radius:0;font-size:14px;line-height:2}}@media (max-width:390px){div.px-captcha-error{font-size:10px}.px-captcha-error-refid{font-size:11px;line-height:2.5}}';\n        document.head.appendChild(style);\n        var div = document.createElement('div');\n        div.className = 'px-captcha-error-container';\n        div.innerHTML = '<div class=\"px-captcha-error-header\">Before we continue...</div><div class=\"px-captcha-error-message\">Press & Hold to confirm you are<br>a human (and not a bot).</div><div class=\"px-captcha-error-button\">Press & Hold</div><div class=\"px-captcha-error-wrapper\"><div class=\"px-captcha-error\"><img class=\"px-captcha-error\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAQCAMAAADDGrRQAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABFUExURUdwTNYELOEGONQILd0AONwALtwEL+AAL9MFLfkJSNQGLdMJLdQJLdQGLdQKLtYFLNcELdUGLdcBL9gFL88OLdUFLNEOLglBhT4AAAAXdFJOUwC8CqgNIRgRoAS1dWWuR4RTjzgryZpYblfkcAAAAI9JREFUGNNdj+sWhCAIhAdvqGVa1r7/oy6RZ7eaH3D4ZACBIed9wlOOMtUnSrEmZ6cHa9YAIfsbCkWrdpi/c50Bk2CO9mNLdMAu03wJA3HpEnfpxbyOg6ruyx8JJi6KNstnslp1dbPd9GnqmuYq7mmcv1zjnbQw8cV0xzkqo+fX1zkjUOO7wnrInUTxJiruC3vtBNRoQQn2AAAAAElFTkSuQmCC\">Please check your internet connection' + (window._pxMobile ? '' : ' or disable your ad-blocker') + '.</div></div><div class=\"px-captcha-error-refid\">Reference ID ' + window._pxUuid + '</div>';\n        document.body.appendChild(div);\n        if (window._pxMobile) {\n            setTimeout(function() {\n                location.href = '/px/captcha_close?status=-1';\n            }, 5000);\n        }\n    };\n    document.head.appendChild(script);\n</script>\n<script src=\"https://ist-translations.stockx.com/px-translator_v4.js\"></script>\n\n\n<div id=\"px-captcha-wrapper\" dir=\"auto\"><div class=\"px-captcha-container\"><img class=\"px-captcha-logo\" height=\"40\" src=\"https://stockx-assets.imgix.net/logo/stockx-logo-green-2021.svg\" alt=\"Logo\"><div class=\"px-captcha-message\">Press &amp; Hold to confirm you are<br>a human (and not a bot).</div><div id=\"px-captcha\" style=\"display: block; min-width: 253px;\"><iframe style=\"display: none; width: 100%; height: 50px; border: 0; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;\" token=\"4ec9880c6498ac236be7cd86bbaa8824c64c6b4c7b4f315bd0c64c659d7d1cc911949a7df0603a2c4f26a66e19d7d15f10d5b77e0163f325cb46cfbeb29aac95\" title=\"Human verification challenge\"></iframe></div><div class=\"px-captcha-refid\">Reference ID 67b16458-4ee9-11f0-ac29-ef0faa92c53c</div></div></div></body></html>",
+      "content_encoding": "utf-8",
+      "content_format": "raw",
+      "content_type": "text/html",
+      "cookies": [
+        {
+          "comment": null,
+          "domain": ".stockx.com",
+          "expires": null,
+          "http_only": false,
+          "max_age": null,
+          "name": "_pxvid",
+          "path": "/",
+          "secure": false,
+          "size": 42,
+          "value": "6a5102a5-4ee9-11f0-9f8e-8b98ae6501d9",
+          "version": null
+        },
+        {
+          "comment": null,
+          "domain": ".stockx.com",
+          "expires": null,
+          "http_only": false,
+          "max_age": null,
+          "name": "pxcts",
+          "path": "/",
+          "secure": false,
+          "size": 41,
+          "value": "6a511368-4ee9-11f0-9f8e-dace63f76c6d",
+          "version": null
+        },
+        {
+          "comment": null,
+          "domain": ".stockx.com",
+          "expires": "2025-06-21 21:53:59",
+          "http_only": false,
+          "max_age": null,
+          "name": "_pxde",
+          "path": "/",
+          "secure": false,
+          "size": 118,
+          "value": "9cfd93d70fdda795175e4c49cba9d235cdb42266d0008ec6a005e9c7138e389d:eyJ0aW1lc3RhbXAiOjE3NTA1NDI1MDg4MDcsImZfa2IiOjB9",
+          "version": null
+        },
+        {
+          "comment": null,
+          "domain": ".stockx.com",
+          "expires": "2025-06-21 21:53:59",
+          "http_only": false,
+          "max_age": null,
+          "name": "_px3",
+          "path": "/",
+          "secure": false,
+          "size": 399,
+          "value": "80a46d7f011620ad525368daf674d55cf91b33daa7e9065afa0581f23b24893e:gsLqNEaUBKuVqSopMdvbOji/ZWc8CN6QHIiPoP5/Gk1q+91oDaMexlNGAU+S5PZ/3lXY+osXjMmBp0D8b6+edQ==:1000:lQc3l+NU7W7Jhy10LQHiy68fbRmqs4lqDvV601eNqa3PIFFm0inGbYMbd50/w0X0RMqll8M9txtO9Hm2uKZpo2Pp9YUUFrhHh9zc8SJGK09cxA8zAws49mEUbLFE1xGvuIesVucud09fhuxCeInUmpcY7qwNzWY5KOfDN7ibFO2sSA5ux478QkoNG1xwOTjW8NySEHOJwWepTvGSJgCZkY3xvWWNp8MnOcowta3nRgQ=",
+          "version": null
+        },
+        {
+          "comment": null,
+          "domain": ".stockx.com",
+          "expires": null,
+          "http_only": false,
+          "max_age": null,
+          "name": "cf_clearance",
+          "path": "/",
+          "secure": true,
+          "size": 438,
+          "value": "u6WPJ92FyquHNY2l_l17uzIw.BNmmjPLjepxEat_vx8-1750542483-1.2.1.1-_UOt3h79Cq2sRnctKc5m6mmfoEK1If7DT00SRZD7vIjbF33I1jccW9dwTe3GyyViC3UQtEMSqDwFwIUZ_3Sr9GoMTgv4Bsy0y.bah_ZnHmvNij38v.qDm_ZvFHySS5IZPLFptkW9IK6H5i02kSaR7tGO1lxUu_mq9ficmosHedEWHHocqJOYHl7CKSwqOrJwJGw0XWuQGmEsOMODxFrvCdi9FBmxOaUC_YvavVfvPmxSUM4j8OlUSS9Wm3GY80vly0ltkCrvjs1JkihFQikFTHJzNAdq7ExPEBgHWYvUO5ZClIg7I3.JKvL64NBD3LTUzffXKJNQsIy6dO2TmJ93RXmgyngTAiaIl5cyuI6oBUo",
+          "version": null
+        }
+      ],
+      "data": null,
+      "dns": null,
+      "duration": 33.72,
+      "error": {
+        "code": "ERR::SCRAPE::BAD_UPSTREAM_RESPONSE",
+        "http_code": 403,
+        "links": {
+          "Related Error Doc": "https://scrapfly.io/docs/scrape-api/error/ERR::SCRAPE::BAD_UPSTREAM_RESPONSE"
+        },
+        "message": "The website you target respond with an unexpected status code (>400) - The scrapped url: https://stockx.com/ respond with 403 - Forbidden: ",
+        "retryable": true
+      },
+      "extracted_data": null,
+      "format": "text",
+      "iframes": [],
+      "log_url": "https://scrapfly.io/dashboard/monitoring/log/01JYA7CWDPZW1QKRJVDY3415FH",
+      "reason": "Forbidden",
+      "request_headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Accept-Encoding": "gzip, deflate, br",
+        "accept-language": "en,en-US;q=0.8,en;q=0.7",
+        "priority": "u=0, i",
+        "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "document",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "none",
+        "sec-fetch-user": "?1",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+      },
+      "response_headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cf-ray": "9536b5b5b9cbb7fd-LAX",
+        "content-encoding": "br",
+        "content-security-policy": "base-uri 'none'; connect-src *.cookielaw.org *.doubleclick.net *.criteo.com *.datadoghq.com *.launchdarkly.com *.onetrust.com *.qualtrics.com *.quantummetric.com *.riskified.com *.px-cloud.net *.bing.com *.stockx.com cloudflareinsights.com *.cloudflareinsights.com 'self' *.adtrafficquality.google browser-intake-datadoghq.com *.browser-intake-datadoghq.com google.com *.google.com *.hub-box.com *.braintree-api.com *.braintreegateway.com *.fbot.me *.googlesyndication.com mapixl.com *.mapixl.com *.amazon-adsystem.com *.paa-reporting-advertising.amazon https://www.facebook.com *.samsung.com 44.238.122.172 100.20.58.101 35.85.84.151 44.228.85.26 34.215.155.61 52.71.121.170 18.210.229.244 44.212.189.233 3.212.39.155 52.22.50.55 35.160.46.251 54.156.2.105 *.appsflyer.com *.crwdcntrl.net *.adyen.com *.px-client.net *.px-cdn.net *.pxchk.net *.gstatic.com *.openx.net *.google-analytics.com *.paytm.in *.paytmpayments.com *.googletagmanager.com paypal.com *.paypal.com perimeterx.net *.perimeterx.net *.rubiconproject.com media.net *.media.net *.dotomi.com id5-sync.com *.id5-sync.com *.eu-1-id5-sync.com *.adnxs.com *.pubmatic.com *.sharethrough.com *.adsrvr.org *.33across.com *.rtbhouse.com dnacdn.net *.dnacdn.net *.publisher-services.amazon.dev crcldu.com *.eu-4-id5-sync.com *.eu-3-id5-sync.com *.a2z.com https://*.zigpoll.com *.cdn-apple.com *.afterpay.com https://*.smarty.com https://*.botchk.net *.paypalobjects.com; default-src 'self' stockx.com *.stockx.com; font-src https://web-assets.stockx.com https://cash-f.squarecdn.com https://*.zigpoll.com https://fonts.gstatic.com *.paypalobjects.com; frame-src https://*; img-src 'self' blob: https://* http://google-analytics.com *.paypalobjects.com *.paypal.com; media-src https://*.cloudflarestream.com; object-src 'none'; script-src *.cookielaw.org *.stockx.com *.cloudflareinsights.com *.fbot.me *.sift.com *.doubleclick.net *.quantummetric.com *.clevertap.com www.googletagmanager.com *.clevertap-prod.com *.riskified.com *.sardine.ai *.trustpilot.com *.qualtrics.com bat.bing.com *.bat.bing.com *.adtrafficquality.google *.google.com *.rokt.com *.hub-box.com *.paypal.com *.googlesyndication.com 'self' *.mountain.com mapixl.com *.amazon-adsystem.com *.facebook.net *.criteo.net *.criteo.com *.openxcdn.net *.tvsquared.com *.33across.com www.googleadservices.com *.www.googleadservices.com 'unsafe-eval' 'unsafe-inline' *.crwdcntrl.net getrockerbox.com *.cloudflare.com *.appsflyer.com *.creativecdn.com *.px-cloud.net *.px-cdn.net yourbow.com *.yourbow.com https://*.fastclick.net https://*.id5-sync.com pubmatic.com *.pubmatic.com cash.app *.cash.app paypalobjects.com *.paypalobjects.com https://*.googletagservices.com https://*.zigpoll.com https://js.squarecdn.com *.cdn-apple.com *.squarecdn.com *.braintreegateway.com; style-src 'self' 'unsafe-inline' https://web-assets.stockx.com https://checkoutshopper-live.adyen.com https://*.hub-box.com https://*.braintree-api.com https://*.braintreegateway.com https://*.adyen.com https://*.cash.app https://*.quantummetric.com https://*.zigpoll.com https://fonts.googleapis.com; worker-src blob: https://stockx.com; report-uri https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=2nnVRsDFOgfDBMb91VkiInBK8PeLSD11LWpbENVJpBI-1750542503-1.0.1.1-59dMgngqzz3Nh.rLuNuzbApq.uCGYEyXFtZxNreSXZd35iS70Yn53CqRx.42DdsJeD7mJ6QmCZf4IScgnSjJ9YcffD9LsUqCQV9S_cBX3SHpZh.xoTEibTWO2445vJBi75FJP7HDTFvHhwphiG9NesC3xo88.kEYlAunnKtaV.ZiZP4hj0tcdNm8B6QlQgV2GksdafzF2._.KDfQNG2fhw; report-to cf-ijegukqprrrumsdh",
+        "content-type": "text/html",
+        "date": "Sat, 21 Jun 2025 21:48:23 GMT",
+        "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/csp-reporting.cloudflare.com\\/cdn-cgi\\/script_monitor\\/report?m=2nnVRsDFOgfDBMb91VkiInBK8PeLSD11LWpbENVJpBI-1750542503-1.0.1.1-59dMgngqzz3Nh.rLuNuzbApq.uCGYEyXFtZxNreSXZd35iS70Yn53CqRx.42DdsJeD7mJ6QmCZf4IScgnSjJ9YcffD9LsUqCQV9S_cBX3SHpZh.xoTEibTWO2445vJBi75FJP7HDTFvHhwphiG9NesC3xo88.kEYlAunnKtaV.ZiZP4hj0tcdNm8B6QlQgV2GksdafzF2._.KDfQNG2fhw\"}],\"group\":\"cf-ijegukqprrrumsdh\",\"max_age\":86400}",
+        "server": "cloudflare",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff"
+      },
+      "screenshots": {},
+      "size": 0,
+      "ssl": null,
+      "status": "DONE",
+      "status_code": 403,
+      "success": false,
+      "url": "https://stockx.com/"
+    },
+    "uuid": "01JYA7CWDPZW1QKRJVDY3415FH"
+  },
+  "timestamp": "2025-06-22T00:48:33.869676"
+}

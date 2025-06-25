@@ -1,0 +1,37 @@
+what are the filters for low-balling products
+İtems that have atleast 3 sales on the last month
+
+should the bot check if products are delivered
+yes stockx has delivery tracking
+
+Are you aware website might not have enough products for 100 bots
+
+Shouldn't we sell the products with the bot or are you gonna handle that manually when they arrive 
+Selling part is off the table he will handle manually 
+
+did you test privacy cards beforehand 
+yes he did 
+
+what does stockxapi have  
+stockx api is not working for bidding but there is a monitor part 
+
+do you have a different shipment addresses 
+he will provide addresses
+
+are we gonna low-ball every product or selected products
+if it has 3 sales in the past 6 months we will buy
+
+what if the item is new but its an oppoturnity
+we will gonna ignore them
+
+I'll need bidding logic to be written in whatsapp
+its a one 
+
+do we have to code a system from strach or can we implement an ai system if possible 
+we will search if there is we will use if not we will code it from strach
+
+are you gonna provide a claude account
+
+what are the accounts that will be provided 
+amazon aws 
+claude
