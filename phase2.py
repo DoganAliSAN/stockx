@@ -3,6 +3,41 @@ import random
 import time
 import json
 import os
+import cv2
+import numpy as np
+import mss
+import pyautogui
+import threading
+pause_event = threading.Event()
+pause_event.set()
+
+stop_event = threading.Event()
+
+
+def click_with_image(template_path, threshold=0.7, timeout=10):
+    print(f"Looking for image: {template_path}")
+    start_time = time.time()
+
+    template = cv2.imread(template_path, cv2.IMREAD_GRAYSCALE)
+    w, h = template.shape[::-1]
+
+    with mss.mss() as sct:
+        monitor = sct.monitors[1]  # Fullscreen
+
+        
+        screenshot = np.array(sct.grab(monitor))
+        gray_screenshot = cv2.cvtColor(screenshot, cv2.COLOR_BGR2GRAY)
+
+        res = cv2.matchTemplate(gray_screenshot, template, cv2.TM_CCOEFF_NORMED)
+        min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+
+        if max_val >= threshold:
+            print(f"Match found at {max_loc} with confidence {max_val}")
+            x, y = max_loc[0] + w // 2, max_loc[1] + h // 2
+            return x,y
+        else:
+            print(f"No match (confidence={max_val:.2f})")
+            return False
 
 def reset_session():
     import requests
@@ -100,273 +135,225 @@ def save_cookies(context, filename="stockx_cookies.json"):
             print(f"🔑 {cookie['name']}: {cookie['value'][:20]}...")
 
 def run_with_proxy():
-    reset_session()
-    time.sleep(5)
-    
-    # Generate dynamic user agent
-    ua_config = get_random_user_agent()
-    print(f"🎭 Using User-Agent: {ua_config['os_info']}")
-    print(f"🔧 Platform: {ua_config['platform']}")
-    
-    # Proxy configuration
-    proxy_config = {
-        "server": "http://geo.iproyal.com:12321",
-        "username": "fOKUYXAOqvb2X9rW",
-        "password": "PCpUshlGu2LEiq27_country-us_session-MORfLE7b_lifetime-5m"
-    }
-    
-    with sync_playwright() as p:
-        # Launch browser with stealth args
-        browser = p.chromium.launch(
-            headless=False,
-            args=[
-                '--disable-blink-features=AutomationControlled',
-                '--disable-dev-shm-usage',
-                '--no-sandbox',
-                '--disable-web-security',
-                '--disable-features=VizDisplayCompositor',
-                '--disable-background-timer-throttling',
-                '--disable-backgrounding-occluded-windows',
-                '--disable-renderer-backgrounding',
-                '--disable-field-trial-config',
-                '--disable-ipc-flooding-protection',
-                '--enable-features=NetworkService,NetworkServiceLogging',
-                '--force-color-profile=srgb',
-                '--metrics-recording-only',
-                '--use-mock-keychain',
-                '--disable-extensions',
-                '--no-default-browser-check',
-                '--no-first-run',
-                '--disable-default-apps',
-                '--disable-component-extensions-with-background-pages',
-                '--disable-extensions-except',
-                '--load-extension=""'
-            ]
-        )
+    while not stop_event.is_set():
+        pause_event.wait()
+        reset_session()
+        time.sleep(5)
         
-        # Dynamic viewport based on OS
-        if 'Macintosh' in ua_config['os_info']:
-            viewport = {'width': random.choice([1440, 1920]), 'height': random.choice([900, 1080])}
-        elif 'Windows' in ua_config['os_info']:
-            viewport = {'width': random.choice([1366, 1920]), 'height': random.choice([768, 1080])}
-        else:  # Linux
-            viewport = {'width': random.choice([1920, 1600]), 'height': random.choice([1080, 900])}
+        # Generate dynamic user agent
+        ua_config = get_random_user_agent()
+        print(f"🎭 Using User-Agent: {ua_config['os_info']}")
+        print(f"🔧 Platform: {ua_config['platform']}")
         
-        # Create context with dynamic configuration
-        context = browser.new_context(
-            proxy=proxy_config,
-            user_agent=ua_config['user_agent'],
-            viewport=viewport,
-            locale='en-US',
-            timezone_id='America/New_York',
-            extra_http_headers={
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-                'Accept-Encoding': 'gzip, deflate, br',
-                'Accept-Language': 'en-US,en;q=0.9',
-                'Cache-Control': 'max-age=0',
-                'Sec-Fetch-Dest': 'document',
-                'Sec-Fetch-Mode': 'navigate',
-                'Sec-Fetch-Site': 'none',
-                'Sec-Fetch-User': '?1',
-                'Sec-Ch-Ua': ua_config['sec_ch_ua'],
-                'Sec-Ch-Ua-Mobile': '?0',
-                'Sec-Ch-Ua-Platform': ua_config['platform'],
-                'Upgrade-Insecure-Requests': '1'
-            }
-        )
+        # Proxy configuration
+        proxy_config = {
+            "server": "http://geo.iproyal.com:12321",
+            "username": "fOKUYXAOqvb2X9rW",
+            "password": "PCpUshlGu2LEiq27_country-us_session-MORfLE7b_lifetime-5m"
+        }
         
-        page = context.new_page()
-        
-        # Enhanced anti-detection script with dynamic properties
-        page.add_init_script(f"""
-            // Remove webdriver property
-            Object.defineProperty(navigator, 'webdriver', {{
-                get: () => undefined,
-            }});
+        with sync_playwright() as p:
+            # Launch browser with stealth args
+            browser = p.chromium.launch(
+                headless=False,
+                args=[
+                    '--disable-blink-features=AutomationControlled',
+                    '--disable-dev-shm-usage',
+                    '--no-sandbox',
+                    '--disable-web-security',
+                    '--disable-features=VizDisplayCompositor',
+                    '--disable-background-timer-throttling',
+                    '--disable-backgrounding-occluded-windows',
+                    '--disable-renderer-backgrounding',
+                    '--disable-field-trial-config',
+                    '--disable-ipc-flooding-protection',
+                    '--enable-features=NetworkService,NetworkServiceLogging',
+                    '--force-color-profile=srgb',
+                    '--metrics-recording-only',
+                    '--use-mock-keychain',
+                    '--disable-extensions',
+                    '--no-default-browser-check',
+                    '--no-first-run',
+                    '--disable-default-apps',
+                    '--disable-component-extensions-with-background-pages',
+                    '--disable-extensions-except',
+                    '--load-extension=""'
+                ]
+            )
             
-            // Dynamic plugin count
-            const pluginCount = {random.randint(3, 8)};
-            Object.defineProperty(navigator, 'plugins', {{
-                get: () => Array.from({{length: pluginCount}}, (_, i) => i + 1),
-            }});
+            # # Dynamic viewport based on OS
+            # if 'Macintosh' in ua_config['os_info']:
+            #     viewport = {'width': random.choice([1440, 1920]), 'height': random.choice([900, 1080])}
+            # elif 'Windows' in ua_config['os_info']:
+            #     viewport = {'width': random.choice([1366, 1920]), 'height': random.choice([768, 1080])}
+            # else:  # Linux
+            #     viewport = {'width': random.choice([1920, 1600]), 'height': random.choice([1080, 900])}
             
-            // Mock languages with slight variations
-            const languages = ['en-US', 'en'];
-            Object.defineProperty(navigator, 'languages', {{
-                get: () => languages,
-            }});
+            # Create context with dynamic configuration
+            context = browser.new_context(
+                proxy=proxy_config,
+                user_agent=ua_config['user_agent'],
+                # viewport=viewport,
+                locale='en-US',
+                timezone_id='America/New_York',
+                extra_http_headers={
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+                    'Accept-Encoding': 'gzip, deflate, br',
+                    'Accept-Language': 'en-US,en;q=0.9',
+                    'Cache-Control': 'max-age=0',
+                    'Sec-Fetch-Dest': 'document',
+                    'Sec-Fetch-Mode': 'navigate',
+                    'Sec-Fetch-Site': 'none',
+                    'Sec-Fetch-User': '?1',
+                    'Sec-Ch-Ua': ua_config['sec_ch_ua'],
+                    'Sec-Ch-Ua-Mobile': '?0',
+                    'Sec-Ch-Ua-Platform': ua_config['platform'],
+                    'Upgrade-Insecure-Requests': '1'
+                }
+            )
             
-            // Dynamic hardware properties
-            Object.defineProperty(navigator, 'hardwareConcurrency', {{
-                get: () => {random.choice([4, 8, 12, 16])},
-            }});
+            page = context.new_page()
             
-            // Mock permissions
-            const originalQuery = window.navigator.permissions.query;
-            window.navigator.permissions.query = (parameters) => (
-                parameters.name === 'notifications' ?
-                    Promise.resolve({{ state: Notification.permission }}) :
-                    originalQuery(parameters)
-            );
+            # Enhanced anti-detection script with dynamic properties
+            page.add_init_script(f"""
+                // Remove webdriver property
+                Object.defineProperty(navigator, 'webdriver', {{
+                    get: () => undefined,
+                }});
+                
+                // Dynamic plugin count
+                const pluginCount = {random.randint(3, 8)};
+                Object.defineProperty(navigator, 'plugins', {{
+                    get: () => Array.from({{length: pluginCount}}, (_, i) => i + 1),
+                }});
+                
+                // Mock languages with slight variations
+                const languages = ['en-US', 'en'];
+                Object.defineProperty(navigator, 'languages', {{
+                    get: () => languages,
+                }});
+                
+                // Dynamic hardware properties
+                Object.defineProperty(navigator, 'hardwareConcurrency', {{
+                    get: () => {random.choice([4, 8, 12, 16])},
+                }});
+                
+                // Mock permissions
+                const originalQuery = window.navigator.permissions.query;
+                window.navigator.permissions.query = (parameters) => (
+                    parameters.name === 'notifications' ?
+                        Promise.resolve({{ state: Notification.permission }}) :
+                        originalQuery(parameters)
+                );
+                
+                // Mock chrome runtime
+                window.chrome = {{
+                    runtime: {{}}
+                }};
+                
+                // Remove automation indicators
+                delete window.cdc_adoQpoasnfa76pfcZLmcfl_Array;
+                delete window.cdc_adoQpoasnfa76pfcZLmcfl_Promise;
+                delete window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol;
+                
+                // Add realistic screen properties with slight variance
+                
+                
+                Object.defineProperty(screen, 'width', {{ get: () => screenWidth }});
+                Object.defineProperty(screen, 'height', {{ get: () => screenHeight }});
+                Object.defineProperty(screen, 'availWidth', {{ get: () => screenWidth - 10 }});
+                Object.defineProperty(screen, 'availHeight', {{ get: () => screenHeight - 100 }});
+            """)
+            # //const screenWidth = {viewport['width']} + {random.randint(-10, 10)};
+            #     //const screenHeight = {viewport['height']} + {random.randint(-10, 10)};
             
-            // Mock chrome runtime
-            window.chrome = {{
-                runtime: {{}}
-            }};
+            # Capture request headers
+            # def handle_request(request):
+            #     if 'stockx.com' in request.url:
+            #         print(f"URL: {request.url}")
+            #         print(f"Headers: {dict(request.headers)}")
+            #         print("---")
             
-            // Remove automation indicators
-            delete window.cdc_adoQpoasnfa76pfcZLmcfl_Array;
-            delete window.cdc_adoQpoasnfa76pfcZLmcfl_Promise;
-            delete window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol;
+            # page.on("request", handle_request)
             
-            // Add realistic screen properties with slight variance
-            const screenWidth = {viewport['width']} + {random.randint(-10, 10)};
-            const screenHeight = {viewport['height']} + {random.randint(-10, 10)};
-            
-            Object.defineProperty(screen, 'width', {{ get: () => screenWidth }});
-            Object.defineProperty(screen, 'height', {{ get: () => screenHeight }});
-            Object.defineProperty(screen, 'availWidth', {{ get: () => screenWidth - 10 }});
-            Object.defineProperty(screen, 'availHeight', {{ get: () => screenHeight - 100 }});
-        """)
-        
-        # Capture request headers
-        # def handle_request(request):
-        #     if 'stockx.com' in request.url:
-        #         print(f"URL: {request.url}")
-        #         print(f"Headers: {dict(request.headers)}")
-        #         print("---")
-        
-        # page.on("request", handle_request)
-        
-        # Navigate to the site
+            # Navigate to the site
 
-        try:
-            print("🚀 Navigating to StockX...")
-            page.goto("https://stockx.com")
-            time.sleep(15)
-            page.click('p:contains("Hold")')
-            
-            # Human-like wait with variance
-            wait_time = random.randint(2000, 4000)
-            page.wait_for_timeout(wait_time)
-            
-            print("🔐 Attempting login...")
-            page.click("#nav-login")
-            page.wait_for_timeout(random.randint(2000, 4000))
-            
-            # Type with human-like delays
-            page.fill("#email-login", "ertepberke@gmail.com")
-            time.sleep(random.uniform(2, 4))
-            
-            page.fill("#password-login", "11024076742Da")
-            time.sleep(random.uniform(2, 4))
-            
-            page.click("#btn-login")
-            page.wait_for_timeout(random.randint(4000, 6000))
-
-            # Check if login was successful
             try:
-                print("📋 Checking login status...")
-                page.goto("https://stockx.com/profile", timeout=10000)
-                page.wait_for_url("https://stockx.com/profile", timeout=10000)
+                print("🚀 Navigating to StockX...")
+                page.goto("https://stockx.com")
+                #wait for page to load 
                 page.wait_for_timeout(5000)
-
-                print("✅ Login successful!")
-                save_cookies(context, "stockx_logged_in_cookies.json")
+                pause_event.wait()
                 
-            except:
-                print("❌ Login may have failed or took too long")
-                save_cookies(context, "stockx_partial_cookies.json")
+                # Human-like wait with variance
+                wait_time = random.randint(2000, 4000)
+                page.wait_for_timeout(wait_time)
                 
-            print("✨ Page loaded successfully!")
-            input("Press Enter to close the browser...")
-            
-        except Exception as e:
-            print(f"❌ Error: {e}")
-        
-        finally:
-            browser.close()
+                print("🔐 Attempting login...")
+                page.click("#nav-login")
+                page.wait_for_timeout(random.randint(2000, 4000))
+                pause_event.wait()
+                
+                # Type with human-like delays
+                page.fill("#email-login", "ertepberke@gmail.com")
+                time.sleep(random.uniform(2, 4))
 
-def run_without_proxy():
-    """Version without proxy for testing"""
-    # Generate dynamic user agent for non-proxy version too
-    ua_config = get_random_user_agent()
-    print(f"🎭 Using User-Agent: {ua_config['os_info']}")
-    
-    with sync_playwright() as p:
-        browser = p.chromium.launch(
-            headless=False,
-            args=[
-                '--disable-blink-features=AutomationControlled',
-                '--disable-dev-shm-usage',
-                '--no-sandbox',
-                '--disable-web-security',
-                '--disable-features=VizDisplayCompositor'
-            ]
-        )
-        
-        # Dynamic viewport
-        if 'Macintosh' in ua_config['os_info']:
-            viewport = {'width': random.choice([1440, 1920]), 'height': random.choice([900, 1080])}
-        elif 'Windows' in ua_config['os_info']:
-            viewport = {'width': random.choice([1366, 1920]), 'height': random.choice([768, 1080])}
-        else:
-            viewport = {'width': random.choice([1920, 1600]), 'height': random.choice([1080, 900])}
-        
-        context = browser.new_context(
-            user_agent=ua_config['user_agent'],
-            viewport=viewport,
-            extra_http_headers={
-                'sec-ch-ua': ua_config['sec_ch_ua'],
-                'sec-ch-ua-mobile': '?0',
-                'sec-ch-ua-platform': ua_config['platform']
-            }
-        )
-        
-        page = context.new_page()
-        
-        # Anti-detection script
-        page.add_init_script("""
-            Object.defineProperty(navigator, 'webdriver', {
-                get: () => undefined,
-            });
-            
-            Object.defineProperty(navigator, 'plugins', {
-                get: () => [1, 2, 3, 4, 5],
-            });
-        """)
-        
-        page.goto("https://stockx.com")
-        page.wait_for_timeout(10000)        
-        
-        page.click("#nav-login")
-        page.wait_for_timeout(10000)
-        page.fill("#email-login", "ertepberke@gmail.com")
-        time.sleep(3)
-        page.fill("#password-login", "11024076742Da")
-        time.sleep(3)
-        page.click("#btn-login")
-        page.wait_for_timeout(10000)
-        
-        # Check if login was successful and save cookies
-        try:
-            page.wait_for_selector('[data-testid="user-menu"], #nav-logout, .user-avatar', timeout=10000)
-            print("✅ Login successful!")
-            save_cookies(context, "stockx_logged_in_cookies.json")
-        except:
-            print("❌ Login may have failed or took too long")
-            save_cookies(context, "stockx_partial_cookies.json")
+                
+                page.fill("#password-login", "11024076742Da")
+                time.sleep(random.uniform(2, 4))
 
-        input("Press Enter to close...")
-        browser.close()
+                
+                page.click("#btn-login")
+                page.wait_for_timeout(random.randint(4000, 6000))
+                pause_event.wait()
+
+                # Check if login was successful
+                try:
+                    print("📋 Checking login status...")
+                    page.goto("https://stockx.com/profile", timeout=10000)
+                    pause_event.wait()
+                    page.wait_for_url("https://stockx.com/profile", timeout=10000)
+                    page.wait_for_timeout(5000)
+
+                    print("✅ Login successful!")
+                    save_cookies(context, "stockx_logged_in_cookies.json")
+                    
+                except:
+                    print("❌ Login may have failed or took too long")
+                    save_cookies(context, "stockx_partial_cookies.json")
+                    
+                print("✨ Page loaded successfully!")
+                input("Press Enter to close the browser...")
+                
+            except Exception as e:
+                import traceback
+                traceback.print_exc()
+                print(f"❌ Error: {e}")
+            
+            finally:
+                browser.close()
+
+def protection_check():
+    while 1 :
+        check = click_with_image("presshold.png")
+        if check != False:
+            pause_event.clear()
+            pyautogui.moveTo(check[0], check[1], duration=0.2)
+            pyautogui.mouseDown()
+            time.sleep(7)  # for now we have no way to calculate the time it will take to 
+                            # pass the captcha. It is calculated dynamically changes everytime
+                            # 15 seconds is a good time to wait for the captcha
+            pyautogui.mouseUp()
+            pause_event.set()
+
 
 if __name__ == "__main__":
-    # Choose which version to run
-    use_proxy = input("Use proxy? (y/n): ").lower() == 'y'
+
+    t1 = threading.Thread(target=run_with_proxy)
+    t2 = threading.Thread(target=protection_check)
     
-    if use_proxy:
-        print("🔧 Using proxy with dynamic user-agent rotation...")
-        run_with_proxy()
-    else:
-        print("🔧 Running without proxy with dynamic user-agent...")
-        run_without_proxy()
+    t1.start()
+    t2.start()
+    
+    t1.join()
+    t2.join()
